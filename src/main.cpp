@@ -49,11 +49,11 @@ struct enemy {
     }
 };
 
-enemy* enemyOne = new enemy("Ochin", 10, 3, 1);
-enemy* enemyTwo = new enemy("Po", 10, 3, 1);
-enemy* enemyThree = new enemy("U", 10, 3, 1);
-enemy* enemyFive = new enemy("N", 10, 3, 1);
-enemy* enemyFour = new enemy("KO", 10, 3, 1);
+enemy* enemyOne = new enemy("slime", 10, 3, 1);
+enemy* enemyTwo = new enemy("two", 10, 3, 1);
+enemy* enemyThree = new enemy("three", 10, 3, 1);
+enemy* enemyFive = new enemy("five", 10, 3, 1);
+enemy* enemyFour = new enemy("four", 10, 3, 1);
 
 enemy* boss = new enemy("boss", 10, 3, 1);
 
