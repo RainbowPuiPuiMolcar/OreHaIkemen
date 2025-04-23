@@ -398,6 +398,18 @@ int main(int argc, char* argv[]) {
             {
                 SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
             }
+            else if (roomNumber == 1)
+            {
+                if (playStop)
+                {
+                    SDL_SetRenderDrawColor(renderer, 0, 255, 255, 255);
+                    drawText(renderer, 0.0f, 0.0f, 0.0f, japaneseFont, "セーブ", WindowSize / 1.5, 30.0f);
+                    drawText(renderer, 0.0f, 0.0f, 0.0f, japaneseFont, "ステータス", WindowSize / 1.5, 30.0f);
+                    drawText(renderer, 0.0f, 0.0f, 0.0f, japaneseFont, "スキル", WindowSize / 1.5, 30.0f);
+                    drawText(renderer, 0.0f, 0.0f, 0.0f, japaneseFont, "持ち物", WindowSize / 1.5, 30.0f);
+                    drawText(renderer, 0.0f, 0.0f, 0.0f, japaneseFont, "終わる", WindowSize / 1.5, 30.0f);
+                }
+            }
             else
             {
                 if (isKeyDown(event, SDLK_UP)) playerRect.y -= 5;
@@ -426,19 +438,12 @@ int main(int argc, char* argv[]) {
                 SDL_RenderCopy(renderer, woodLightTexture, nullptr, &screenRect);
                 if (playStop)
                 {
-                    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // 白
-                    SDL_RenderFillRect(renderer, &rect);
+                    // SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // 白
+                    // SDL_RenderFillRect(renderer, &rect);
                 }
             }
             else
-            {
-                SDL_RenderCopy(renderer, woodLightTexture, nullptr, &screenRect);
-                if (playStop)
-                {
-                    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // 白
-                    SDL_RenderFillRect(renderer, &rect);
-                }
-            }
+            {}
             SDL_RenderPresent(renderer);
             SDL_Delay(16);
         }
