@@ -10,3 +10,6 @@
 #### yajuiku + run (ビルドしたアプリ実行)
 
 ## くわしくは compiler/src/main.cpp を読むか、yajuiku helpで確認
+
+## モンスターとの遭遇は一ブロック歩くごとに1/30の確率で遭遇
+##
