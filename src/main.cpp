@@ -421,6 +421,15 @@ int main(int argc, char* argv[]) {
 
             if (roomNumber == 5)
             {}
+            else if (roomNumber == 1)
+            {
+                SDL_RenderCopy(renderer, woodLightTexture, nullptr, &screenRect);
+                if (playStop)
+                {
+                    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // 白
+                    SDL_RenderFillRect(renderer, &rect);
+                }
+            }
             else
             {
                 SDL_RenderCopy(renderer, woodLightTexture, nullptr, &screenRect);
