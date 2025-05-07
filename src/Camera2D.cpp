@@ -27,13 +27,13 @@ void Camera2D::setPosition(int x, int y) {
     this->y = y;
 }
 
-void Camera2D::clampPosition(int mapWidth, int mapHeight) {
+void Camera2D::clampPosition(float mapWidth, float mapHeight) {
     // カメラがマップ外に出ないように制限
     if (x < 0) x = 0;
     if (y < 0) y = 0;
     // SOCHIN
-    // if (x + screenWidth > mapWidth) x = mapWidth - screenWidth;
-    // if (y + screenHeight > mapHeight) y = mapHeight - screenHeight;
+    if (x + screenWidth > mapWidth) x = mapWidth - screenWidth;
+    if (y + screenHeight > mapHeight) y = mapHeight - screenHeight;
 }
 
 SDL_Rect Camera2D::getView() const {
