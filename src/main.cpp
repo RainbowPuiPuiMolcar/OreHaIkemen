@@ -39,8 +39,9 @@ struct PlayerData {
 struct enemy {
     std::string name;
     int hp;
-    int attackDamage;
+    int strength;
     int enemyNumber;
+    int level;
 };
 
 struct Line {
@@ -48,7 +49,12 @@ struct Line {
     int fontSize;    // 役割は大きく(40)、名前は小さく(25)
 };
 
-enemy enemyOne = {"slime", 10, 3, 1};
+enemy enemyOne;
+enemyOne.name = "slime";
+enemyOne.hp = 30;
+enemyOne.strength = 12;
+enemyOne.enemyNumber = 1;
+
 enemy enemyTwo = {"two", 10, 3, 1};
 enemy enemyThree = {"three", 10, 3, 1};
 enemy enemyFive = {"five", 10, 3, 1};
